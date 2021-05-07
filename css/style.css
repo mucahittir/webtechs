@@ -1,118 +1,88 @@
 * {
-  font-family: "Segoe UI", Arial, sans-serif;
-
-  font-size: 13pt;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13pt;
 }
 
 body {
-  background-color: rgb(212, 212, 212);
+    background-color: rgb(212, 212, 212);
 }
 
 .header {
-  text-align: center;
-
-  padding: 30px;
-
-  border: 2px solid;
-
-  background-image: url("https://turkishairlines.ssl.cdn.sdlmedia.com/637080128182797816QO.jpg");
-
-  width: 100%;
+    text-align: center;
+    padding: 30px;
+    border: 2px solid;
+    background-image: url("https://turkishairlines.ssl.cdn.sdlmedia.com/637080128182797816QO.jpg");
+    width: 100%;
 }
 
 .h-header {
-  color: white;
-
-  font-size: 40px;
+    color: white;
+    font-size: 40px;
 }
 
 .navbar-custom {
-  border-radius: 0% !important;
-
-  -webkit-border-radius: 0% !important;
-
-  -moz-border-radius: 0% !important;
-
-  -ms-border-radius: 0% !important;
-
-  -o-border-radius: 0% !important;
+    border-radius: 0% !important;
+    -webkit-border-radius: 0% !important;
+    -moz-border-radius: 0% !important;
+    -ms-border-radius: 0% !important;
+    -o-border-radius: 0% !important;
 }
 
 .content {
-  background-color: white;
-
-  margin: 10px;
-
-  padding: 20px;
-
-  box-shadow: 0 0 65px #ffffff inset, 0 0 3px #beae8c inset, 0 0 10px #816f47;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 65px #ffffff inset, 0 0 3px #beae8c inset, 0 0 10px #816f47;
 }
 
 .fakeimage {
-  background-color: #aaa;
-
-  width: 100%;
-
-  padding: 20px;
-
-  margin-top: 10px;
-
-  margin-bottom: 10px;
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .row-custom {
-  padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .footer {
-  width: 100%;
-
-  bottom: 0;
-
-  background-color: #221f1f;
-
-  text-align: center;
-
-  padding: 5px;
+    width: 100%;
+    bottom: 0;
+    background-color: #221f1f;
+    text-align: center;
+    padding: 5px;
 }
 
 .ortala {
-  text-align: center;
+    text-align: center;
 }
 
 .footer-content {
-  padding: 20px;
-
-  text-align: left;
-
-  color: #6b6b6b;
-
-  font-size: medium;
+    padding: 20px;
+    text-align: left;
+    color: #6b6b6b;
+    font-size: medium;
 }
 
 .footer-content a {
-  color: #6b6b6b;
-
-  text-decoration: none;
-
-  font-size: medium;
+    color: #6b6b6b;
+    text-decoration: none;
+    font-size: medium;
 }
 
 .footer-content a:hover {
-  color: #8a8a8a;
+    color: #8a8a8a;
 }
 
 .copyright {
-  background-color: rgb(19, 19, 19);
-
-  padding: 25px;
-
-  margin: 10px;
-
-  text-align: left;
-
-  color: rgb(187, 187, 187);
+    background-color: rgb(19, 19, 19);
+    padding: 25px;
+    margin: 10px;
+    text-align: left;
+    color: rgb(187, 187, 187);
 }
 .media {
-  padding: 10px;
+    padding: 10px;
 }
