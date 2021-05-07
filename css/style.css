@@ -49,9 +49,8 @@ body {
 
 .footer {
     width: 100%;
-    bottom: 0;
-    background-color: #221f1f;
-    text-align: center;
+    display: flex;
+    background-color: #343a40!important;
     padding: 5px;
 }
 
@@ -77,12 +76,11 @@ body {
 }
 
 .copyright {
-    background-color: rgb(19, 19, 19);
-    padding: 25px;
-    margin: 10px;
-    text-align: left;
+    padding: 15px;
+    margin: 15px;
     color: rgb(187, 187, 187);
 }
+
 .media {
     padding: 10px;
 }

@@ -1,164 +1,155 @@
 <!DOCTYPE html>
 
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
 
-        <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-            crossorigin="anonymous"
-        />
+    <title>Document</title>
 
-        <script
-            src="https://kit.fontawesome.com/3fbfc6054e.js"
-            crossorigin="anonymous"
-        ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/sehrim.css" />
-    </head>
+    <script src="https://kit.fontawesome.com/3fbfc6054e.js" crossorigin="anonymous"></script>
 
-    <body>
-        <!--Header-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sehrim.css" />
+</head>
 
-        <div class="header">
-            <h2 class="h-header">Kastamonu</h2>
-        </div>
+<body>
+    <!--Navbar-->
 
-        <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">WebDesign</a>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">WebDesign</a>
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html"
-                            >Hakkında <span class="sr-only">(current)</span></a
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Hakkında</a
                         >
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="cv.html">CV'm</a>
-                    </li>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="sehrim.html">Şehrim</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="sehrim.html">Şehrim</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="iletisim.html">İletişim</a>
-                    </li>
-                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
+                </li>
+            </ul>
 
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Kayıt Ol</a>
-                    </li>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kayıt Ol</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CV'm</a>
-                    </li>
-                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CV'm</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href=""><img class="first-slide" src="https://www.manzara.gen.tr/w1/Evrenyede-G%C3%BCn-Bat%C4%B1m%C4%B1.jpg" alt="First slide"></a>
+
             </div>
-        </nav>
+            <div class="carousel-item">
+                <a href="#"> <img class="second-slide" src="https://sondevir.gaste24.com/images/haberler/haber/2015/11/23/gun-batimi-kastamonu-abana.jpg" alt="Second slide"></a>
 
-        <div class="custom-slider">
-            <div class="row">
-                <div class="col-md-12 p-0">
-                    <div
-                        id="carouselExampleControls"
-                        class="carousel slide"
-                        data-ride="carousel"
-                    >
-                        <div class="carousel-inner slider-img-size">
-                            <div class="carousel-item active">
-                                <img
-                                    src="images/images1.jpg "
-                                    class="d-block center"
-                                    alt="..."
-                                />
-                            </div>
+            </div>
+            <div class="carousel-item">
+                <a href=""><img class="third-slide" src="https://www.manzara.gen.tr/w1/kastamonu-2.jpg" alt="Third slide"></a>
 
-                            <div class="carousel-item">
-                                <img
-                                    src="images/images2.jpg"
-                                    class="d-block center"
-                                    alt="..."
-                                />
-                            </div>
-
-                            <div class="carousel-item">
-                                <img
-                                    src="images/images3.jpg"
-                                    class="d-block center"
-                                    alt="..."
-                                />
-                            </div>
-                        </div>
-
-                        <a
-                            class="carousel-control-prev"
-                            href="#carouselExampleControls"
-                            role="button"
-                            data-slide="prev"
-                        >
-                            <span
-                                class="carousel-control-prev-icon"
-                                aria-hidden="true"
-                            ></span>
-
-                            <span class="sr-only">Previous</span>
-                        </a>
-
-                        <a
-                            class="carousel-control-next"
-                            href="#carouselExampleControls"
-                            role="button"
-                            data-slide="next"
-                        >
-                            <span
-                                class="carousel-control-next-icon"
-                                aria-hidden="true"
-                            ></span>
-
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--İçerik-->
+    <div class="icerik">
+        <div class="baslik">
+            <h1>
+                Evliyalar Şehri Kastamonu
+            </h1>
+        </div>
+        <div class="metin">
+            <p>
+                Türkiye'nin cennet köşelerinden biri olan Kastamonu, büyük şehirlerin gürültüsünden kaçmak isteyenlerin sığınabilecekleri bir huzur bölgesi, panoramik dağlarıyla, yemyeşil ovalarıyla, zümrüt sahilleriyle, zengin kültürel varlıklarıyla bir çok alternatifler
+                sunan bir tatil beldesidir. Eski bir yerleşim alanı olduğu bilinen Kastamonu yöresi MÖ.18.yy.da Gas'ların yurdu olmuş, zamanla Hititler, Firigler, Kimmerler, Lidyalı'lar, Pers'ler, Pontuslular, Romalılar ve Bizanslıların yönetimine geçmiştir.
+                Romalıların bu yörede kurduğu Paflagonia isimli eyaletin merkezi olan pompei-polis höyüğü bugünkü Taşköprü ilçesinde bulunmaktadır. Bizans hanedanı komenoslar tarafından yapılan ve Kastamonu şehrinin tarihsel çekirdeğini oluşturan Kastamonu
+                kalesi görkemli görüntüsüyle ziyaretçileri asırlardır selamlamaktadır. Kastamonu geleneksel Türk evi ve yakın dönem Osmanlı mimarisi örneklerinin yoğun olarak bulunduğu ender illerdendir. Kentsel sit kapsamına alınmış olan Kastamonu, Taşköprü,
+                İnebolu, Küre ve Abana'nın eski mahalleleri ve yapıları ziyaretçilerde nostalji ve hayranlık uyandırır. Milli mücadele sırasında lojistik destek açısından en güvenilir bölge olan Kastamonu İnebolu limanından Ankara'ya erzak, cephane ve
+                insan akışında büyük yararlılıklar göstermiştir. Kurtuluş savaşında en fazla şehit veren üçüncü il olan Kastamonu 'nun Araç ilçesi ise nüfus bazında en çok şehit veren yurdumuzun tek ilçesi olarak tarihin altın sayfalarında yerini almıştır.
+                Kastamonu'nun sahip olduğu bu zengin tarihi ve kültürel mirası kadar bir diğer zenginliği de harikulade tabiatıdır. Başta Ilgaz Dağı Milli Parkı dağcılık sporları için mükemmel bir merkezdir. Zengin orman örtüsü, çeşitli yaban hayvanları
+                ile görenlerin unutamayacağı özelliklere sahiptir. Kastamonu'nun 40 km. güneyindeki Ilgaz Dağı kayak merkezi kış aylarında büyük ilgi görmektedir. Kastamonu'nun bitki örtüsü ve peyzaj açısından çok zengin yaylaları da vardır. Daha ziyade
+                Araç, Çatalzeytin ve Bozkurt ilçelerinde bulunan bu yaylalar yaz aylarında tatillerini şehir dışında geçirmek isteyenler için önemli bir turizm kaynağıdır. Pınarbaşı ilçesinde vahşi doğasıyla Valla Kanyonu ve Türkiye'nin en derin dördüncü
+                mağarası olan Ilgarini, kampçılar ve maceracılar tarafından keşfedilmeyi beklemektedir. Kastamonu Karadeniz'de kirlenmemiş, betonlaşmamış 170 km. kıyı bandıyla deniz, kum ve güneş arayanlara da hitap etmektedir. Bu yılı bandında çok sayıda
+                doğal kumsal ve bunların ardından yoğun bir orman örtüsü bulunmaktadır. Çatalzeytin'deki Ginolu ile Cide'deki Giderus koyları Karadeniz'in en güzel koylarıdır.
+            </p>
+        </div>
+        <hr class="featurette-divider my-5">
+        <div class="row mx-5 " style="text-align: center;">
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="https://cdn1.neredekal.com/hotel/2/VbB/180x135/emQP.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>Ilıca Şelalesi</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Daha fazla »</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="text-align: center;">
+                <img class="rounded-circle" src="https://cdn1.neredekal.com/hotel/2/O5B/180x135/63QP.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>İsmail bey külliyesi</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">Daha fazla »</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="text-align: center;">
+                <img class="rounded-circle" src="https://cdn1.neredekal.com/hotel/2/YI7/180x135/4vQP.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>Pompeipolis Antik Kenti</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+                    risus.
+                </p>
+                <p><a class="btn btn-secondary" href="#" role="button">Daha fazla »</a></p>
+            </div>
+            <hr class="featurette-divider my-5">
+            <!-- /.col-lg-4 -->
+        </div>
+    </div>
 
-        <!--Scriptler-->
+    <footer class="footer ">
+        <div class=" copyright  align-middle">
+            Mücahit TİRYAKİ Copyright © 2020
+        </div>
+    </footer>
 
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"
-        ></script>
+    <!--Scriptler-->
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
 </html>
