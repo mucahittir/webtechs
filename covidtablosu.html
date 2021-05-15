@@ -41,6 +41,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="iletisim.html">İletişim</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="covidtablosu.html">Covid Vaka Sayıları</a>
                 </li>
@@ -55,11 +56,27 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="py-2">
-        </div>
         <div class="row">
             <div class="col-md-12">
-                <object data="ozgecmis.pdf" type="application/pdf" width="100%" height="800px"></object>
+                <div class="py-3">
+                    <h1 class="ortala">Covid19 Vaka Sayısı</h1>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Ülke Adı</th>
+                            <th scope="col">Yeni Vaka Sayısı</th>
+                            <th scope="col">Yeni Ölüm Sayısı</th>
+                            <th scope="col">Toplam Vaka Sayısı</th>
+                            <th scope="col">Toplam Ölüm Sayısı</th>
+                            <th scope="col">Toplam İyileşen Sayısı</th>
+                            <th scope="col">Aktif Vaka Sayısı</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablo">
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -76,13 +93,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     <script>
-        $.ajax({
-            async: true,
-            crossDomain: true,
-            url: "https://official-joke-api.appspot.com/random_joke",
-            method: "GET",
-        }).done(function(response) {
-            console.log(response);
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://covid-19-tracking.p.rapidapi.com/v1",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "5bd72598e6msh1da63513f1c668ep17985fjsn6a5dec04cfd8",
+                "x-rapidapi-host": "covid-19-tracking.p.rapidapi.com"
+            }
+        };
+
+        $.ajax(settings).done(function(response) {
+
+            var covidListesi = response;
+            var i = 1;
+            covidListesi.forEach(function(element, key) {
+
+                $("#tablo").append(`
+                        <tr>
+                            <th scope="col">` + i + `</th>
+                            <th scope="col">` + element["Country_text"] + `</th>
+                            <th scope="col">` + element["New Cases_text"] + `</th>
+                            <th scope="col">` + element["New Deaths_text"] + `</th>
+                            <th scope="col">` + element["Total Cases_text"] + `</th>
+                            <th scope="col">` + element["Total Deaths_text"] + `</th>
+                            <th scope="col">` + element["Total Recovered_text"] + `</th>
+                            <th scope="col">` + element["Active Cases_text"] + `</th>
+                        </tr>
+                `);
+                i++;
+            });
         });
     </script>
 </body>
+
+</html>
+
+</html>

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
     <script src="https://kit.fontawesome.com/3fbfc6054e.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sehrim.css" />
 </head>
 
 <body>
-
-    <!--Navbar-->
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">WebDesign</a>
 
@@ -53,36 +54,54 @@
             </ul>
         </div>
     </nav>
-
-    <div class="container-fluid">
-        <div class="py-2">
-        </div>
+    <div class="container my-4">
         <div class="row">
-            <div class="col-md-12">
-                <object data="ozgecmis.pdf" type="application/pdf" width="100%" height="800px"></object>
+            <div class="col-md-6 offset-md-3 py-5">
+                <div class="card border-0 ">
+                    <img src="https://spwww.sccpss.com/PublishingImages/login1.png" class="img-fluid " alt="">
+
+                    <div class="card-body">
+                        <form id="auth">
+                            <h2><b>Giriş Yap</b></h2>
+                            <div class="form-group my-3">
+                                <label for="kullanici">Kullanıcı adı</label>
+                                <input type="text" name="kullanici" class="form-control" placeholder="Mail yada Kullanıcı Adı" required>
+
+                            </div>
+                            <div class="form-group my-3">
+                                <label for="sifre">Password</label>
+                                <input type="password" name="sifre" class="form-control" placeholder="Şifre" required>
+
+                            </div>
+                            <div class="form-group my-3 text-center">
+                                <button type="submit" class="btn btn-outline-dark">Giriş yap</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <footer class="footer ">
-        <div class=" copyright  align-middle">
+        <div class=" copyright align-middle ">
             Mücahit TİRYAKİ Copyright © 2020
         </div>
     </footer>
-    <!--Scriptler-->
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-    <script>
-        $.ajax({
-            async: true,
-            crossDomain: true,
-            url: "https://official-joke-api.appspot.com/random_joke",
-            method: "GET",
-        }).done(function(response) {
-            console.log(response);
-        });
-    </script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script>
+    $('#auth').submit(function() {
+
+        $.ajax({
+            url: 'authentication.php',
+            type: 'POST',
+            data: $("#auth").serialize(),
+            success: function(msg) {
+                alert(msg);
+            }
+        });
+    });
+</script>
+
+</html>
