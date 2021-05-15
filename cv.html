@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 
 <head>
@@ -14,71 +13,58 @@
 </head>
 
 <body>
-    <div>
-        <!--Header-->
 
-        <div class="header">
-            <h2 class="h-header">Kastamonu</h2>
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">WebDesign</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Hakkında <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cv.html">CV'm</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kayıt Ol</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CV'm</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <!--Navbar-->
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">WebDesign</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Hakkında
-                                <span class="sr-only">(current)</span></a
-                            >
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="cv.html">CV'm</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="sehrim.html">Şehrim</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="iletisim.html">İletişim</a
-                            >
-                        </li>
-                    </ul>
-
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Kayıt Ol</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CV'm</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div>
-                        <div class="content">
-                            <h1 class="ortala">CV</h1>
-                            <p>
-                                Merhaba, adım Mücahit Tiryaki. Sakarya Üniversitesi'nin Bilgisayar Mühendisliğinde okuyorum. Kitap okumayı, yazı yazmayı, kod yazmayı ve bilgisayar oyunu oynamayı severim. Sakarya'da yaşıyorum.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="py-2">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <object data="ozgecmis.pdf" type="application/pdf" width="100%" height="800px"></object>
             </div>
         </div>
     </div>
+
     <footer class="footer ">
         <div class=" copyright  align-middle">
             Mücahit TİRYAKİ Copyright © 2020
@@ -86,7 +72,18 @@
     </footer>
     <!--Scriptler-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script>
+        $.ajax({
+            async: true,
+            crossDomain: true,
+            url: "https://official-joke-api.appspot.com/random_joke",
+            method: "GET",
+        }).done(function(response) {
+            console.log(response);
+        });
+    </script>
+</body>
