@@ -110,6 +110,8 @@
                         icon: "success",
                         title: "Başarılı!",
                         text: msg,
+                    }).then(() => {
+                        $(window).attr('location', 'https://mucahittiryaki.site')
                     });
                 },
                 error: function(xhr,status,error){
