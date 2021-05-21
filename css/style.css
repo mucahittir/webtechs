@@ -84,3 +84,13 @@ body {
 .media {
     padding: 10px;
 }
+.paragraf{
+    text-align: justify;
+    height: 200px;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 9em;
+    line-height: 1.8em;
+}

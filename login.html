@@ -65,12 +65,12 @@
                             <h2><b>Giriş Yap</b></h2>
                             <div class="form-group my-3">
                                 <label for="kullanici">Kullanıcı adı</label>
-                                <input type="text" name="kullanici" class="form-control" placeholder="Mail yada Kullanıcı Adı" required>
+                                <input type="text" name="kullanici" id="kullanici" class="form-control" placeholder="Mail yada Kullanıcı Adı">
 
                             </div>
                             <div class="form-group my-3">
-                                <label for="sifre">Password</label>
-                                <input type="password" name="sifre" class="form-control" placeholder="Şifre" required>
+                                <label for="sifre">Şifre</label>
+                                <input type="password" name="sifre" id="sifre" class="form-control" placeholder="Şifre">
 
                             </div>
                             <div class="form-group my-3 text-center">
@@ -90,17 +90,38 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.0/dist/sweetalert2.all.min.js"></script>
 <script>
     $('#auth').submit(function() {
-
-        $.ajax({
-            url: 'authentication.php',
-            type: 'POST',
-            data: $("#auth").serialize(),
-            success: function(msg) {
-                alert(msg);
+            if ($("#kullanici").val() == "") {
+                alert("Lütfen kullanıcı adınızı giriniz");
+                return false;
             }
-        });
+            if ($("#sifre").val() == "") {
+                alert("Lütfen şifrenizi giriniz");
+                return false;
+            }
+            $.ajax({
+                url: 'authentication.php',
+                type: 'POST',
+                data: $("#auth").serialize(),
+                success: function(msg) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Başarılı!",
+                        text: msg,
+                    });
+                },
+                error: function(xhr,status,error){
+                    Swal.fire({
+                        icon: "error",
+                        title: "Hata!",
+                        text: xhr.responseText,
+                    });
+                }
+
+            });
+            return false;
     });
 </script>
 
